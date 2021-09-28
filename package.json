@@ -1,0 +1,23 @@
+{
+  "name": "P3_voile_zoe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VoileZoe/oh_my_food.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VoileZoe/oh_my_food/issues"
+  },
+  "homepage": "https://github.com/VoileZoe/oh_my_food#readme",
+  "dependencies": {
+    "sass": "^1.42.1"
+  }
+}
