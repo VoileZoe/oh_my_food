@@ -23,20 +23,30 @@
         </header>
 
         <main>
-            <section1>
-                <form method="POST" action="traitement.php">
-                    <input type="text" name="localisation">
-                </form>
-                
-                <h2>Réservez le menu qui vous convient</h2>
-                <p>Découvrez des restaurants d'exception,<br/>
-                    séléctionnés par nos soins.</p>
-                <button>Explorer nos restaurant</button>
+            <section>
+                <div class="section1">
+                    
+                    <form method="post" action="traitement.php" class="form-header">
+                        <!--barre de recherche-->
+                        
+                        <!--icone-->
+                        <input type="text" name="localisation" id="localisation" value="Paris, Belleville" autofocus />
+                        <!--autofocus peut être pas necessaire-->
+                        <label for="localisation"></label>
+                    </form>
 
-            </section1>
+                    <!--<i class="fas fa-map-marker-alt"></i>-->
+
+                    <h2>Réservez le menu qui vous convient</h2>
+                    <p>Découvrez des restaurants d'exception,<br/>
+                        séléctionnés par nos soins.</p>
+                    <button>Explorer nos restaurant</button>
+
+                </div>
+            </section>
 
             <section>
-                <div class="section2"></div>
+                <div class="section2">
 
                     <h2>Fonctionnement</h2>
 

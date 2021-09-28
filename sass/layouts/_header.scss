@@ -2,12 +2,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0px 1px 5px rgb(172, 169, 169);
-
 }
 
+.header-logo:after{
+    box-shadow: 0px 10px 10px -10px #666 inset;
+} 
+/*l'ombre ne fonctionne pas*/
+
 .logo{
-    border: 2px solid red;
-    width: 15rem;
+    width: 12rem;
 
 }
