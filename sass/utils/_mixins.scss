@@ -7,6 +7,7 @@
 @mixin button{
     height: 3.5rem;
     border-radius: 50px;
+    box-shadow: 4px 4px 10px #a3a1a1;
     border: none;
     color: white;
     background: linear-gradient(354deg, rgba(147,86,220,1) 0%, rgba(255,121,218,1) 100%);
@@ -20,4 +21,35 @@
     margin-left: 1.5rem;
     margin-bottom: 1.5rem;
     font-weight: bold;
+}
+
+@mixin new{
+    background-color: $color-tertiary;
+    color:$color-tertiary-darker;
+    width: 4.5rem;
+    padding: 8px 4px 8px 12px;
+    font-size: medium;
+    border-radius: 3px;
+    position: relative;
+    top: -275px;
+    left: 250px;
+}
+
+@mixin img-menu{
+    font-size: 100px;
+    border: solid 2px red;
+}
+
+@mixin dish {
+    background: white;
+    border-radius: 20px;
+    padding: 0.2rem 1rem 0.2rem 1rem;
+    margin-bottom: 1rem;
+    h4{
+        font-weight: bold;
+        font-size: large;
+    }
+    strong{
+        font-weight: bold;
+    }
 }

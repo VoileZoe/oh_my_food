@@ -2,7 +2,7 @@
 html, body {
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .section1 {
@@ -10,18 +10,22 @@ html, body {
   text-align: center;
   padding-bottom: 4rem;
 }
+
 .section1 h2 {
   padding: 2rem 4.5rem 0 4.5rem;
   font-weight: bold;
 }
+
 .section1 p {
   font-size: 1.2rem;
   color: #646464;
 }
+
 .section1 button {
   height: 3.5rem;
   border-radius: 50px;
-  box-shadow: 4px 4px 10px #a3a1a1;
+  -webkit-box-shadow: 4px 4px 10px #a3a1a1;
+          box-shadow: 4px 4px 10px #a3a1a1;
   border: none;
   color: white;
   background: linear-gradient(354deg, #9356dc 0%, #ff79da 100%);
@@ -34,16 +38,19 @@ html, body {
   padding-bottom: 3rem;
   /* on initialise et nomme un compteur */
 }
+
 .section2 h2 {
   font-size: 28px;
   margin-left: 1.5rem;
   margin-bottom: 1.5rem;
   font-weight: bold;
 }
+
 .section2 ol {
   counter-reset: repas;
   padding-right: 2.5rem;
 }
+
 .section2 li {
   list-style-type: none;
   counter-increment: repas;
@@ -51,18 +58,23 @@ html, body {
   margin-bottom: 10px;
   border-radius: 30px;
   background: #f6f6f6;
-  box-shadow: 4px 4px 10px #d8d7d7;
+  -webkit-box-shadow: 4px 4px 10px #d8d7d7;
+          box-shadow: 4px 4px 10px #d8d7d7;
   margin-bottom: 1.5rem;
   margin-right: -1rem;
   padding-top: 1.8rem;
   padding-bottom: 1.8rem;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: large;
 }
+
 .section2 li .fas {
   width: 2.5rem;
   color: grey;
 }
+
 .section2 li:before {
   content: counter(repas);
   /* on affiche le compteur */
@@ -71,19 +83,21 @@ html, body {
   margin-right: 20px;
   vertical-align: top;
   background: #9356DC;
-  -moz-border-radius: 60px;
   border-radius: 60px;
   font-weight: bold;
   font-size: 1em !important;
   color: white;
 }
+
 .section2 a {
   text-decoration: none;
   color: black;
 }
+
 .section2 a :hover {
   background: #f5edff;
 }
+
 .section2 a :hover .fas {
   color: #9356DC;
 }
@@ -93,16 +107,19 @@ html, body {
   background: #f6f6f6;
   padding-bottom: 4rem;
 }
+
 .section3 h2 {
   font-size: 28px;
   margin-left: 1.5rem;
   margin-bottom: 1.5rem;
   font-weight: bold;
 }
+
 .section3 a {
   text-decoration: none;
   color: black;
 }
+
 .section3 .new {
   background-color: #99E2D0;
   color: #028968;
@@ -116,18 +133,27 @@ html, body {
 }
 
 .header-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.header-logo:after {
-  box-shadow: 0px 10px 10px -10px #666 inset;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-shadow: 0px 0px 0px 10px #666;
+          box-shadow: 0px 0px 0px 10px #666;
 }
 
 /*l'ombre ne fonctionne pas*/
 .logo {
   width: 12rem;
+}
+
+.form-header {
+  -webkit-box-shadow: inset 5px 15px 5px -10px red;
+          box-shadow: inset 5px 15px 5px -10px red;
 }
 
 .form-header input {
@@ -145,87 +171,63 @@ footer {
   padding-bottom: 1rem;
   margin-top: -1rem;
 }
+
 footer h2 {
   padding-left: 2.5rem;
   padding-top: 2rem;
   font-family: Shrikhand;
   font-size: 20px;
 }
+
 footer ul {
   list-style-type: none;
   line-height: 1.7rem;
   font-size: 18px;
 }
+
 footer .fas {
   width: 20px;
 }
+
 footer .fa-hands-helping {
   font-size: 13px;
 }
 
-.bg-img img {
-  width: 100%;
-}
-
-.section-menu {
-  background: #f6f6f6;
-  padding: 2rem 1rem 2rem 1rem;
-  border-top-left-radius: 50px;
-  border-top-right-radius: 50px;
-}
 .section-menu h2 {
+  border: solid 2px red;
   font-family: Shrikhand;
-}
-.section-menu .dish {
-  background: white;
-  border-radius: 20px;
-  padding: 0.2rem 1rem 0.2rem 1rem;
-  margin-bottom: 1rem;
-}
-.section-menu .dish h4 {
-  font-weight: bold;
-  font-size: large;
-}
-.section-menu .dish strong {
-  font-weight: bold;
-}
-.section-menu button {
-  height: 3.5rem;
-  border-radius: 50px;
-  box-shadow: 4px 4px 10px #a3a1a1;
-  border: none;
-  color: white;
-  background: linear-gradient(354deg, #9356dc 0%, #ff79da 100%);
-  font-size: 1.2rem;
-  padding-right: 1.5rem;
-  padding-left: 1.5rem;
+  color: #9356DC;
 }
 
 .restaurant_card {
   border-radius: 20px;
   background-color: white;
-  box-shadow: 0 0 10px 4px #dad9d9;
+  -webkit-box-shadow: 0 0 10px 4px #dad9d9;
+          box-shadow: 0 0 10px 4px #dad9d9;
   padding-bottom: 0.5rem;
   margin: 0 1.5rem 1.5rem 1.5rem;
   height: 18rem;
 }
+
 .restaurant_card img {
   width: 100%;
   height: 70%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
 }
+
 .restaurant_card h3 {
   margin-left: 1.5rem;
   font-size: large;
   line-height: 15px;
   font-weight: bold;
 }
+
 .restaurant_card p {
   margin-left: 1.5rem;
   font-size: large;
   line-height: 15px;
 }
-
 /*# sourceMappingURL=ohmyfood_stylesheet.css.map */
