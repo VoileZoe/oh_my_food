@@ -1,4 +1,6 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 html, body {
   margin: 0;
   padding: 0;
@@ -130,6 +132,39 @@ html, body {
   width: 12rem;
 }
 
+.fa-arrow-left {
+  font-size: x-large;
+  position: relative;
+  left: -80px;
+  top: -5px;
+  color: black;
+}
+
+.bg-img-menu1 {
+  background-image: url(../../maquettes_ohmyfood/images/restaurants/lapalettedugout.jpg);
+  height: 300px;
+  background-size: cover;
+}
+
+.bg-img-menu2 {
+  background-image: url(../../maquettes_ohmyfood/images/restaurants/lanoteenchantée.jpg);
+  height: 300px;
+  background-size: cover;
+}
+
+.bg-img-menu3 {
+  background-image: url(../../maquettes_ohmyfood/images/restaurants/alafrancaise.jpg);
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.bg-img-menu4 {
+  background-image: url(../../maquettes_ohmyfood/images/restaurants/ledélicedesens.jpg);
+  height: 300px;
+  background-size: cover;
+}
+
 .form-header input {
   width: 99%;
   height: 3.5rem;
@@ -163,18 +198,17 @@ footer .fa-hands-helping {
   font-size: 13px;
 }
 
-.bg-img img {
-  width: 100%;
-}
-
 .section-menu {
   background: #f6f6f6;
   padding: 2rem 1rem 2rem 1rem;
   border-top-left-radius: 50px;
   border-top-right-radius: 50px;
+  margin-top: -3rem;
 }
 .section-menu h2 {
   font-family: Shrikhand;
+  font-weight: 600;
+  font-size: xx-large;
 }
 .section-menu .dish {
   background: white;
@@ -199,6 +233,9 @@ footer .fa-hands-helping {
   font-size: 1.2rem;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
+}
+.section-menu .commander {
+  text-align: center;
 }
 
 .restaurant_card {
