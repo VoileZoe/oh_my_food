@@ -7,6 +7,77 @@ html, body {
   font-family: "Roboto", sans-serif;
 }
 
+.laodspinner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: scale(0);
+  animation: bigger 2s ease-in-out backwards;
+}
+.laodspinner .circle-spinner {
+  display: flex;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  margin: auto;
+  margin-top: 50px;
+  position: relative;
+  padding: 2rem;
+  color: #8F8F8F;
+  background: #fff;
+  background-clip: padding-box;
+  border-radius: 50%;
+}
+.laodspinner .circle-spinner:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -20px;
+  border-radius: inherit;
+  background: linear-gradient(230.46deg, #5F5FF3 -2.98%, #B67DFF 68.14%, #FF83CD 104.54%);
+  animation: spin 0.25s linear infinite;
+}
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes bigger {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(10);
+    opacity: 0;
+  }
+}
+.laodspinner p {
+  position: relative;
+  left: 32px;
+  top: -300px;
+}
+.laodspinner p img {
+  z-index: 2;
+  width: 300px;
+  padding: 110px 30px 110px 30px;
+}
+
 .section1 {
   background: #f6f6f6;
   text-align: center;
@@ -113,7 +184,7 @@ html, body {
   font-size: medium;
   border-radius: 3px;
   position: relative;
-  top: -275px;
+  top: -330px;
   left: 250px;
 }
 
@@ -211,19 +282,73 @@ footer .fa-hands-helping {
   font-weight: 600;
   font-size: xx-large;
 }
-.section-menu .dish {
+.section-menu .dish-animation {
+  position: relative;
+  overflow: hidden;
+  /*Important pour faire disparaitre l'animation entrente*/
+}
+.section-menu .dish-animation .dish {
   background: white;
   border-radius: 20px;
   padding: 0.2rem 1rem 0.2rem 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: -60px;
 }
-.section-menu .dish h4 {
+.section-menu .dish-animation .dish h4 {
   font-weight: bold;
   font-size: large;
+  margin-top: 10px;
+  margin-bottom: 0;
 }
-.section-menu .dish strong {
+.section-menu .dish-animation .dish .price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.section-menu .dish-animation .dish .price p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.section-menu .dish-animation .dish .price strong {
   font-weight: bold;
+  margin-right: 10px;
 }
+.section-menu .dish-animation .dish:hover + .price strong {
+  transform: translateX(-100%);
+}
+.section-menu .dish-animation .dish:hover + .dish-animation-move {
+  transform: translateX(-100%);
+}
+.section-menu .dish-animation .dish:hover > .fa-check-circle {
+  transform: rotate(-360deg);
+  transition: transform 100ms ease-in-out;
+}
+.section-menu .dish-animation .dish-animation-move {
+  position: relative;
+  top: -17px;
+  left: 394px;
+  background: #99E2D0;
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 20px;
+  width: 20%;
+  height: 77px;
+  transform-origin: 100% 50%;
+  transition: transform 100ms ease-in-out;
+}
+.section-menu .dish-animation .dish-animation-move .fa-check-circle {
+  font-size: 25px;
+  color: white;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+  right: 0;
+  bottom: 0;
+  transform: rotate(0deg);
+  transition: transform 500ms ease-in-out;
+}
+.section-menu .dish-animation .dish-animation-move .price strong {
+  transition: transform 100ms ease-in-out;
+}
+@keyframes move {}
 .section-menu button {
   height: 3.5rem;
   border-radius: 50px;
@@ -264,6 +389,34 @@ footer .fa-hands-helping {
   margin-left: 1.5rem;
   font-size: large;
   line-height: 15px;
+}
+.restaurant_card .far {
+  position: relative;
+  top: -91px;
+  right: -305px;
+  font-size: 24px;
+  margin-top: 1rem;
+  z-index: 0;
+}
+.restaurant_card .fas.fa-heart {
+  opacity: 0;
+  z-index: 1;
+  position: relative;
+  top: -90px;
+  right: -330px;
+  font-size: 26px;
+  margin-top: 1rem;
+  background: -webkit-gradient(linear, left top, left bottom, from(#9356DC), to(#FF79DA));
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.restaurant_card .fas.fa-heart:hover {
+  transform-origin: center center;
+  transition-duration: 3000ms;
+  opacity: 1;
+  transition: all 0.5s;
+  transition-timing-function: ease-in-out;
 }
 
 /*# sourceMappingURL=ohmyfood_stylesheet.css.map */

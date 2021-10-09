@@ -4,6 +4,7 @@
     border-top-left-radius: 50px;
     border-top-right-radius: 50px;
     margin-top: -3rem;
+    
 
 
     h2{
@@ -12,9 +13,65 @@
         font-size: xx-large;
     }
 
-    .dish{
-        @include dish;
+    .dish-animation{
+        position: relative;
+        overflow: hidden; /*Important pour faire disparaitre l'animation entrente*/
+        
+        .dish{
+            @include dish;
+            &:hover{
+                & + .price strong{
+                    transform: translateX(-100%);
+                    // ne fonctionne pas !!!
+                    }
+                & + .dish-animation-move{
+                        transform: translateX(-100%)
+                        
+                    }
+                & > .fa-check-circle{
+                    transform: rotate(-360deg);
+                    transition: transform 100ms ease-in-out;
+                    // ne fonctionne pas !!!
+                    }
+                
+            }
+        }
+        
+        .dish-animation-move{
+            position: relative;
+            top:-17px;
+            left: 394px;
+            background: $color-tertiary;
+            border-bottom-right-radius: 20px;
+            border-top-right-radius: 20px;
+            width: 20%;
+            height: 77px;
+            transform-origin: 100% 50%;
+            transition: transform 100ms ease-in-out;
+
+            .fa-check-circle{
+                font-size: 25px;
+                color: white;
+                position: absolute;
+                top: 25px; left: 25px; right: 0; bottom: 0; 
+                transform: rotate(0deg);
+                transition: transform 500ms ease-in-out;
+            }
+
+            .price strong{
+                transition: transform 100ms ease-in-out;
+            }
+        }
+
+        
+
+
+        @keyframes move {
+            
+        }
     }
+
+    
 
     button{
         @include button;

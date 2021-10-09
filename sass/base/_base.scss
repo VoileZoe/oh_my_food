@@ -4,6 +4,76 @@ html, body{
     font-family: 'Roboto', sans-serif;
 }
 
+.laodspinner{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: scale(0);
+    animation: bigger 2s ease-in-out backwards;
+
+    .circle-spinner {
+        display: flex;
+        align-items: center;
+        width: 250px;
+        height:250px;
+        margin: auto;
+        margin-top: 50px;
+        position: relative;
+        padding: 2rem;
+        color: #8F8F8F;
+        background: #fff;
+        background-clip: padding-box;
+        border-radius: 50%;
+    }
+    .circle-spinner:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+        margin: -20px;
+        border-radius: inherit;
+        background: linear-gradient(230.46deg, #5F5FF3 -2.98%, #B67DFF 68.14%, #FF83CD 104.54%);
+        animation: spin 0.25s linear infinite;
+    }
+
+    @keyframes spin {
+        from {
+            transform: rotate(0deg);}
+        to {
+            transform: rotate(360deg);}
+    }
+
+    @keyframes bigger {
+        0% {
+            transform: scale(0)}
+        60%{
+            transform: scale(1)}
+        80%{
+            transform: scale(1);
+            opacity: 1;}
+        100%{
+            transform: scale(10);
+            opacity: 0;}
+    }
+
+    p{
+        position: relative;
+        left: 32px;
+        top: -300px;
+        
+        img{        
+            z-index: 2;
+            width: 300px;
+            padding:110px 30px 110px 30px;
+        }
+    }
+}
+
 .section1{
     background: $bg-color;
     text-align: center;
