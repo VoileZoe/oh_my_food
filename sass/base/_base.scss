@@ -4,7 +4,9 @@ html, body{
     font-family: 'Roboto', sans-serif;
 }
 
-.laodspinner{
+.loadspinner{
+    display: flex;
+    margin-top: 100px;
     position: absolute;
     top: 0;
     right: 0;
@@ -13,19 +15,36 @@ html, body{
     transform: scale(0);
     animation: bigger 2s ease-in-out backwards;
 
+    
+
     .circle-spinner {
         display: flex;
+
         align-items: center;
-        width: 250px;
-        height:250px;
+        width: 300px;
+        height:300px;
         margin: auto;
         margin-top: 50px;
         position: relative;
-        padding: 2rem;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
         color: #8F8F8F;
         background: #fff;
         background-clip: padding-box;
         border-radius: 50%;
+        .text-laodspinner{
+            font-size: 50px;
+            font-family: Shrikhand;
+            color: black;
+            padding-left: 10px;
+            position: relative;
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+        }
     }
     .circle-spinner:before {
         content: '';
@@ -38,7 +57,7 @@ html, body{
         margin: -20px;
         border-radius: inherit;
         background: linear-gradient(230.46deg, #5F5FF3 -2.98%, #B67DFF 68.14%, #FF83CD 104.54%);
-        animation: spin 0.25s linear infinite;
+        animation: spin 0.5s linear infinite;
     }
 
     @keyframes spin {
@@ -91,6 +110,11 @@ html, body{
 
     button{
         @include button;
+    }
+
+    button:hover{
+        background: linear-gradient(354deg, rgb(154, 114, 202) 0%, rgb(248, 150, 220) 100%);
+        box-shadow: 4px 4px 10px #777676;
     }
 }
 
@@ -168,6 +192,36 @@ html, body{
     .new{
         @include new;
     }
+}
+
+@media all and (min-width:600px) and (max-width:1023px){
+
+    .section2{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    ol{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        
+    }
+
+    li{
+        width: 500px;
+    }
+
+    .restaurant_card{
+        h3{
+            font-size: xx-large;
+        }
+    }
+
+    
+
 }
 
 

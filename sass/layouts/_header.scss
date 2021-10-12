@@ -2,6 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: Shrikhand;
+    font-size: xx-large;
 }
 
 .logo{
@@ -39,4 +41,14 @@
     background-image: url(../../maquettes_ohmyfood/images/restaurants/ledélicedesens.jpg);
     height: 300px;
     background-size: cover;
+}
+
+@media all and (min-width:600px) and (max-width:1023px){
+    .header-logo{
+        font-size: 70px;
+        p{
+            margin: 10px;
+        }
+    }
+
 }

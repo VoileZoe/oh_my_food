@@ -40,34 +40,5 @@
     border: solid 2px red;
 }
 
-@mixin dish {
-    background: white;
-    border-radius: 20px;
-    padding: 0.2rem 1rem 0.2rem 1rem;
-    margin-bottom: -60px;
-    
-    
-    h4{
-        font-weight: bold;
-        font-size: large;
-        margin-top: 10px;
-        margin-bottom: 0;
-        // text-overflow: ellipsis; -> propriété pour mettre trois petits pts après un text rogné
-    }
-    .price{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-
-        p{
-            margin-top: 10px;
-            margin-bottom: 10px;
-        }
 
 
-        strong{
-            font-weight: bold;
-            margin-right: 10px;
-        }
-    }
-}
