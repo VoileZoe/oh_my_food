@@ -85,7 +85,6 @@
     .load__card {
         display: flex;
         flex-direction: row;
-    
         background-color: white;
         border-radius: 20px;
         box-shadow: 4px 4px 10px #d8d7d7;
@@ -170,4 +169,88 @@
     .commander{
         text-align: center;
     }
+}
+
+@media all and (min-width:600px) and (max-width:1023px){
+    h1{
+        font-size:50px !important;
+        margin: 20px 0 0 20px;
+    }
+
+    .desktop{
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .article{
+        width: 30% !important;
+    }
+
+    .container{
+        width: 100% !important;
+    }
+
+    .load{
+        width: 100%;
+    }
+
+    .fas{
+        font-size: 41px !important;
+        
+    }
+
+    .far{
+        font-size: 39px !important;
+        margin-left: -15px;
+        
+    }
+
+    .check i{
+        font-size: 25px !important;
+    }
+
+}
+
+@media all and (min-width:1024px){
+    h1{
+        font-size:70px !important;
+        margin: 20px 0 0 20px;
+    }
+
+    .desktop{
+        display: flex;
+        justify-content: space-around;
+    }
+    
+    .article{
+        width: 30% !important;
+        h2{
+            font-size: 30px;
+        }
+    }
+
+    .container{
+        width: 100% !important;
+    }
+
+    .load{
+        font-size: 25px;
+        width: 100%;
+    }
+
+    .fas{
+        font-size: 41px !important;
+        
+    }
+
+    .far{
+        font-size: 39px !important;
+        margin-left: -15px;
+        
+    }
+
+    .price {
+        width: 21% !important;
+    }
+    
 }

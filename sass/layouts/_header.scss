@@ -6,10 +6,6 @@
     font-size: xx-large;
 }
 
-.logo{
-    width: 12rem;
-
-}
 
 .fa-arrow-left{
     font-size: x-large;
@@ -17,6 +13,7 @@
     left: -80px;
     top: -5px;
     color: black;
+    padding-top: 20px;
 }
 
 .bg-img-menu1{
@@ -51,4 +48,17 @@
         }
     }
 
+}
+
+@media all and (min-width:1024px){
+    .header-logo{
+        font-size: 80px;
+        p{
+            margin: 10px;
+        }
+        .fa-arrow-left{
+            font-size: 50px !important;
+            padding-top: 20px;
+        }
+    }
 }

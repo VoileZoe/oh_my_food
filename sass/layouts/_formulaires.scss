@@ -17,3 +17,29 @@
         }
     }
 }
+
+@media all and (min-width:600px) and (max-width:1023px){
+    .formulaire{
+        font-size: x-large !important;
+        input{
+            font-size: x-large !important;
+        }
+    }
+}
+
+@media all and (min-width:1024px){
+    .formulaire{
+        font-size: xx-large !important;
+        input{
+            font-size: xx-large !important;
+        }
+    }
+
+    .section1 h2{
+        font-size: 40px !important;
+    }
+
+    .section1 p{
+        font-size: 35px !important;
+    }
+}
