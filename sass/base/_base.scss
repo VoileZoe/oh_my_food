@@ -7,26 +7,27 @@ html, body{
 .loadspinner{
     display: flex;
     margin-top: 100px;
-    position: absolute;
-    top: 0;
+    position: fixed;
+    top: -100px;
     right: 0;
     bottom: 0;
     left: 0;
-    transform: scale(0);
-    animation: bigger 2s ease-in-out backwards;
+    background-color: white;
+    transform: scale(1);
+    animation: decrease 2s ease-in-out forwards;
 
     
 
     .circle-spinner {
         display: flex;
-
         align-items: center;
         width: 300px;
         height:300px;
         margin: auto;
         margin-top: 50px;
+        z-index: 1;
         position: relative;
-        top: 0;
+        top: 100px;
         bottom: 0;
         right: 0;
         left: 0;
@@ -34,6 +35,8 @@ html, body{
         background: #fff;
         background-clip: padding-box;
         border-radius: 50%;
+        transform: scale(0);
+        animation: bigger 2s ease-in-out backwards;
         .text-laodspinner{
             font-size: 50px;
             font-family: Shrikhand;
@@ -71,6 +74,17 @@ html, body{
         0% {
             transform: scale(0)}
         60%{
+            transform: scale(1)}
+        80%{
+            transform: scale(1);
+            opacity: 1;}
+        100%{
+            transform: scale(10);
+            opacity: 0;}
+    }
+
+    @keyframes decrease{
+        0% {
             transform: scale(1)}
         80%{
             transform: scale(1);
